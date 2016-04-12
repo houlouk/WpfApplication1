@@ -1,0 +1,81 @@
+﻿<Window x:Class="Music.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Music;assembly=PianoViewModel"
+        x:Name="Window"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="344" Width="1200">
+    <Window.Resources>
+        <local:PianoViewModel x:Key="pianoViewModel" ></local:PianoViewModel>
+        <ObjectDataProvider x:Key="actualNote" ObjectType="{x:Type local:ActualNote}" MethodName="getInstance"/>
+        <local:DoubleSpaceConverter x:Key="doubleSpaceConverter"/>
+        <local:VisibilityConverter x:Key="visibilityConverter"/>
+
+    </Window.Resources>
+
+
+    <Window.Background>
+        <SolidColorBrush Color="Green"/>
+    </Window.Background>
+
+
+
+
+    <Grid  DataContext="{StaticResource pianoViewModel}" Margin="10,50,0,0" >
+        <!--<ListBox ItemsSource="{Binding Notes}"/>-->
+        <ItemsControl  ItemsSource="{Binding NotesBlanches}"  >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Width="{Binding Width,ElementName=Window}"    Rows="1" >
+                    </UniformGrid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Name="buttonWhite" HorizontalAlignment="Stretch" Background="White" Command="{Binding JouerCmd}"  />
+                </DataTemplate>
+
+            </ItemsControl.ItemTemplate>
+
+
+        </ItemsControl>
+
+
+
+        <ItemsControl Name="notesNoires" ItemsSource="{Binding NotesNoires}" VerticalAlignment="Top" Height="100">
+            <ItemsControl.ItemsPanel >
+                <ItemsPanelTemplate>
+                    <UniformGrid Width="{Binding Width,ElementName=Window}"   Rows="1" >
+
+                    </UniformGrid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <UniformGrid Rows="1">
+                        <Button Visibility="{Binding FrequenceNote,Converter={StaticResource visibilityConverter}}" HorizontalAlignment="Stretch" Background="Black" Command="{Binding JouerCmd}"  />
+
+                    </UniformGrid>
+
+                </DataTemplate>
+
+            </ItemsControl.ItemTemplate>
+
+
+        </ItemsControl>
+
+
+        <TextBlock Name="test" Text="{Binding Note, Source={StaticResource actualNote},FallbackValue=RIEN}" />
+
+    
+
+
+    </Grid>
+  
+
+
+
+
+</Window>

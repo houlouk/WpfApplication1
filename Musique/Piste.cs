@@ -80,17 +80,17 @@ namespace Music
 
             List<double> data = new List<double>();
 
-            SineOccilator rs = new SineOccilator(44100);
+            //SineOccilator rs = new SineOccilator(44100);
 
 
             foreach (INote n in notes)
             {
                 double freq = (double)((Note<notes>)n).Frequency;
-                rs.SetFrequency(freq);
+                //rs.SetFrequency(freq);
 
                 for (int i = 0; i < sampleRate * 2; i++)
                 {
-                    data.Add(rs.GetNext(i));
+                    //data.Add(rs.GetNext(i));
                 }
             }
 

@@ -26,7 +26,7 @@
         <ItemsControl  ItemsSource="{Binding NotesBlanches}"  Height="250" Margin="0,0,0,14" VerticalAlignment="Top">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Width="{Binding Width,ElementName=Window}"    Rows="1" >
+                    <UniformGrid    Rows="1" >
                     </UniformGrid>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
@@ -42,10 +42,10 @@
 
 
 
-        <ItemsControl Name="notesNoires" ItemsSource="{Binding NotesNoires}" VerticalAlignment="Top" Height="100">
+        <ItemsControl Name="notesNoires" ItemsSource="{Binding NotesNoires}" VerticalAlignment="Top" Height="100" Margin="-25,0,25,0">
             <ItemsControl.ItemsPanel >
                 <ItemsPanelTemplate>
-                    <UniformGrid Width="{Binding Width,ElementName=Window}"   Rows="1" >
+                    <UniformGrid    Rows="1" >
 
                     </UniformGrid>
                 </ItemsPanelTemplate>

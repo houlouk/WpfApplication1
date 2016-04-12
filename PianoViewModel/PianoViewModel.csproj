@@ -58,10 +58,6 @@
       <Project>{9efe6cbd-df21-436e-9f81-e258bab0b653}</Project>
       <Name>MicroMvvm</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\My First Project\Musique\Musique\Musique.csproj">
-      <Project>{ffd42d05-0ceb-4a4e-a350-0e5bc52ac5ba}</Project>
-      <Name>Musique</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

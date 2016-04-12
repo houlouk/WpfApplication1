@@ -10,7 +10,6 @@
     <Window.Resources>
         <local:PianoViewModel x:Key="pianoViewModel" ></local:PianoViewModel>
         <ObjectDataProvider x:Key="actualNote" ObjectType="{x:Type local:ActualNote}" MethodName="getInstance"/>
-        <local:DoubleSpaceConverter x:Key="doubleSpaceConverter"/>
         <local:VisibilityConverter x:Key="visibilityConverter"/>
 
     </Window.Resources>
@@ -23,9 +22,8 @@
 
 
 
-    <Grid  DataContext="{StaticResource pianoViewModel}" Margin="10,50,0,0" >
-        <!--<ListBox ItemsSource="{Binding Notes}"/>-->
-        <ItemsControl  ItemsSource="{Binding NotesBlanches}"  >
+    <Grid  DataContext="{StaticResource pianoViewModel}" Margin="0,50,0,0" >
+        <ItemsControl  ItemsSource="{Binding NotesBlanches}"  Height="250" Margin="0,0,0,14" VerticalAlignment="Top">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Width="{Binding Width,ElementName=Window}"    Rows="1" >
@@ -67,13 +65,14 @@
         </ItemsControl>
 
 
-        <TextBlock Name="test" Text="{Binding Note, Source={StaticResource actualNote},FallbackValue=RIEN}" />
+        <!--<TextBlock Name="test" Text="{Binding Note, Source={StaticResource actualNote},FallbackValue=RIEN}" />-->
 
-    
+
 
 
     </Grid>
-  
+
+
 
 
 

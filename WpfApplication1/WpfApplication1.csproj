@@ -96,10 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\MvvmExample\MicroMvvm\MicroMvvm.csproj">
-      <Project>{9efe6cbd-df21-436e-9f81-e258bab0b653}</Project>
-      <Name>MicroMvvm</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PianoViewModel\PianoViewModel.csproj">
       <Project>{43c53aa4-d07d-4a9e-8268-66ec60b49172}</Project>
       <Name>PianoViewModel</Name>

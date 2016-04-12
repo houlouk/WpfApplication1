@@ -54,7 +54,7 @@
     <Compile Include="VisibilityConverter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\MvvmExample\MicroMvvm\MicroMvvm.csproj">
+    <ProjectReference Include="..\MicroMvvm\MicroMvvm.csproj">
       <Project>{9efe6cbd-df21-436e-9f81-e258bab0b653}</Project>
       <Name>MicroMvvm</Name>
     </ProjectReference>

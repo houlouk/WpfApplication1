@@ -51,8 +51,11 @@ namespace Music
             foreach (notesNoires note in Enum.GetValues(typeof(notesNoires)))
             {
                 if (i >= NbNoires) break;
-                touches.Add(new Note<notesNoires>(new Tango(), note));
                 touches.Add(new Note<notesNoires>(new Tango(), notesNoires.SILENCE));
+                if (i % 5 == 2 || i % 5 == 4) touches.Add(new Note<notesNoires>(new Tango(), notesNoires.SILENCE));
+
+                touches.Add(new Note<notesNoires>(new Tango(), note));
+
                 i++;
 
             }

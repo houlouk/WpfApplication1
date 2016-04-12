@@ -30,7 +30,7 @@ namespace Music
             List<Note<notesNoires>> touchesNoires = pianoManager.getPianoNoires();
             for (int i=0;i<touchesNoires.Count;i++) 
             {
-                NoteViewModel<notesNoires> note = new NoteViewModel<notesNoires>() { Note = touchesNoires.ElementAt(i),IsDoubleSpace=(i%5==1 || i%5==4) };
+                NoteViewModel<notesNoires> note = new NoteViewModel<notesNoires>() { Note = touchesNoires.ElementAt(i) };
           
                 NotesNoires.Add(note);
             }

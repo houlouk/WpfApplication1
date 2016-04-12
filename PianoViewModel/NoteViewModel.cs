@@ -17,8 +17,8 @@ namespace Music
             get { return Note.Frequency.ToString(); }
         
         }
-        private bool isDoubleSpace=false;
-        public bool IsDoubleSpace { get { return isDoubleSpace; }  set { isDoubleSpace = value; RaisePropertyChanged("IsDoubleSpace"); } }
+        private bool doesntExist=false;
+        public bool DoesntExist { get { return doesntExist; }  set { doesntExist = value; RaisePropertyChanged("DontExist"); } }
 
 
 
